@@ -1,62 +1,64 @@
+@import "../styles/colors.scss";
+
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-h1,
-h3,
-h4,
-h5,
-h6 {
-  margin: 8px 0;
-}
-
-h2 {
-  margin-top: 50px;
-}
-
-p {
-  margin: 0;
-}
-
-.spacer {
-  flex: 1;
-}
-
 .toolbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  height: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 0px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar-text_div {
   display: flex;
   align-items: center;
-  background-color: #04345d;
+  justify-content: center;
+  background: linear-gradient(180deg, $color-tertiary 0%, $color-primary 100%);
+  width: 100%;
+  height: 68px;
+}
+
+.toolbar h1 {
   color: white;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 30px;
 }
 
-.toolbar img {
-  margin: 0 16px;
+.toolbar ul {
+  text-decoration: none;
+  list-style-type: none;
 }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
+.toolbar li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-bottom: 2px solid $border-bottom;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
+.toolbar li:nth-child(5) {
+  background-color: $color-secondary;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
+.toolbar li:nth-child(5):before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(180deg, $color-tertiary 0%, $color-primary 100%);
 }
 
 .content {
@@ -194,7 +196,7 @@ a:hover {
 }
 
 .terminal pre {
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   color: white;
   padding: 0 1rem 1rem;
   margin: 0;
@@ -222,7 +224,7 @@ svg#clouds {
 
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
-  .card-container > *:not(.circle-link) ,
+  .card-container > *:not(.circle-link),
   .terminal {
     width: 100%;
   }
@@ -253,7 +255,8 @@ svg#clouds {
   h3 {
     margin-top: 15px;
   }
-  h2, a {
+  h2,
+  a {
     font-size: 12px;
   }
 }
