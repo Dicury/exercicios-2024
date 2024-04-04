@@ -2,10 +2,18 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-comment',
+  selector: 'app-topic',
   standalone: true,
   imports: [CommonModule],
   template: `<div class="answered-topic">
+    <div class="topic-feedback" style="display: {{ feedback }};">
+      <div class="feedback-background"></div>
+      <div class="feedback-text">
+        <img src="../../../assets/checkmark.png" />
+        <h4>Aguardando feedback dos autores</h4>
+        <p>Editar Tópico</p>
+      </div>
+    </div>
     <h4 class="ops-topic-subject">Assunto da pergunta aparece aqui</h4>
     <h5>Carlos Henrique Santos</h5>
     <p>
@@ -20,10 +28,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
       <p>{{ reply }}</p>
     </div>
   </div>`,
-  styleUrls: ['./Comment.component.scss'],
+  styleUrls: ['./Topic.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CommentComponent {
+export class TopicComponent {
   @Input() like = '';
   @Input() reply = '';
+  @Input() feedback = 'none';
 }

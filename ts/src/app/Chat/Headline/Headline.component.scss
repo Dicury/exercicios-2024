@@ -1,0 +1,36 @@
+@import "../../../styles.scss";
+
+:host {
+  display: block;
+}
+
+.topic-creation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.topic-creation-container h5 {
+  color: $color-primary;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.topic-creation-container img {
+  width: 260px;
+  height: 50px;
+}
+
+.topic-creation-container p {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.headline-explore {
+  color: $color-primary;
+  font-weight: 500;
+  text-decoration: underline;
+  margin: 2rem 0;
+}

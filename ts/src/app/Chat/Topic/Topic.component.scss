@@ -1,0 +1,78 @@
+@import "../../../styles.scss";
+
+:host {
+  display: block;
+}
+
+.answered-topic {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 1rem 1rem;
+  padding: 1rem;
+  border: 1px solid $border-bottom;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.topic-feedback {
+  width: 100%;
+  height: 100%;
+}
+
+.feedback-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feedback-background {
+  background: rgba($border-bottom, $alpha: 0.5);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topic-feedback h4 {
+  color: $title-secondary;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.topic-feedback p {
+  color: $color-primary;
+  text-decoration: underline;
+}
+
+.answered-topic h5 {
+  color: $text-secondary;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ops-topic-subject {
+  color: $color-primary;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.topic-footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topic-footer img:nth-child(1) {
+  height: 19px;
+}
