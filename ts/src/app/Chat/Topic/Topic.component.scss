@@ -5,15 +5,23 @@
 }
 
 .answered-topic {
-  display: flex;
   position: relative;
-  flex-direction: column;
-  gap: 0.5rem;
   margin: 2rem 1rem 1rem;
   padding: 1rem;
   border: 1px solid $border-bottom;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.minimized-topic {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.expanded-topic div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .topic-feedback {

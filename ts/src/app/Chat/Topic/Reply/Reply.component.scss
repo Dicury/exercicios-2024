@@ -1,0 +1,30 @@
+@import "../../../../styles.scss";
+
+:host {
+  display: block;
+}
+
+.comments-container {
+  position: relative;
+  padding: 16px;
+  left: -16px;
+  bottom: -16px;
+  overflow: visible;
+  width: 100%;
+}
+
+.reply-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reply-header div {
+  display: flex;
+  gap: 2rem;
+}
+
+.reply-header p {
+  color: $color-primary;
+  font-size: 14px;
+  font-weight: 700;
+}
