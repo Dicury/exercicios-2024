@@ -1,0 +1,116 @@
+@import "../../styles.scss";
+
+:host {
+  display: block;
+}
+
+.chat-container {
+  margin: 1rem 45px;
+  border: 1px solid $border-bottom;
+}
+
+.chat-container input[name="create-topic"] {
+  display: none;
+}
+
+.chat-title {
+  background-color: $color-secondary;
+}
+
+.chat-title h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: $title-primary;
+  padding: 10px;
+}
+
+.topic-creation-card {
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.bottom-line {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 32px);
+  border-bottom: 1px solid $border-bottom;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.topic-creation-card h5 {
+  color: $color-primary;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.topic-creation-card img {
+  width: 260px;
+  height: 50px;
+}
+
+.topic-creation-card p {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.btn-create-topic {
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  background: linear-gradient(180deg, $color-tertiary 0%, $color-primary 100%);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: "Quicksand";
+}
+
+.btn-create-topic::before {
+  content: url("../../assets/icon-plus.png");
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.chat-container
+  input[name="create-topic"]:checked
+  ~ .topic-creation-card
+  .btn-create-topic {
+  display: none;
+}
+
+.topic-creation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.chat-container
+  input[name="create-topic"]:checked
+  ~ .topic-creation-card
+  .topic-creation-container {
+  display: none;
+}
+
+.topic-form {
+  display: none;
+}
+
+.chat-container
+  input[name="create-topic"]:checked
+  ~ .topic-creation-card
+  .topic-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}

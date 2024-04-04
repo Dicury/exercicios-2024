@@ -1,0 +1,152 @@
+@import "../../styles.scss";
+
+:host {
+  display: block;
+}
+// RESUMO
+
+.content-article {
+  padding: 1rem 45px;
+}
+
+.article_top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article_video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article_video-container h2 {
+  color: $color-primary;
+  font-size: 20px;
+  width: 700px;
+}
+
+.article_right-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article_right-btn-container {
+  display: flex;
+  height: auto;
+  gap: 5px;
+}
+
+.article_right-btn-container button {
+  background-color: $color-primary;
+  padding: 5px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+}
+
+.article_right-btn-container p {
+  color: $color-primary;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-star {
+  background: url("../../assets/star.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 43px;
+  height: 31px;
+}
+
+.btn-doi {
+  background: url("../../assets/doi.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 43px;
+  height: 31px;
+}
+
+.btn-download {
+  background: url("../../assets/download.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 120px;
+  height: 31px;
+}
+
+.article_right-container p {
+  color: $color-primary;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.article_summary {
+  border: 1px solid $border-bottom;
+}
+
+.summary-title {
+  background-color: $color-secondary;
+  padding: 10px;
+}
+
+.article_summary h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: $title-primary;
+}
+
+.article_summary input {
+  display: none;
+}
+
+.summary-container {
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.summary-content {
+  display: none;
+}
+
+.summary-content p {
+  margin-top: 22.75px;
+}
+
+.btn-show-more label {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  color: $color-primary;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-show-more label:nth-child(2) {
+  display: none;
+}
+
+.article_summary
+  input:checked
+  ~ .summary-container
+  .btn-show-more
+  label:nth-child(1) {
+  display: none;
+}
+
+.article_summary
+  input:checked
+  ~ .summary-container
+  .btn-show-more
+  label:nth-child(2) {
+  display: block;
+}
+
+.article_summary input:checked ~ .summary-container .summary-content {
+  display: block;
+}

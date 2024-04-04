@@ -1,0 +1,59 @@
+@import "../../styles.scss";
+
+:host {
+  display: block;
+}
+
+// NAVBAR ESQUERDA
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 0px 10px -6px rgba(0, 0, 0, 0.2);
+}
+
+.toolbar-text_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, $color-tertiary 0%, $color-primary 100%);
+  width: 100%;
+  height: 68px;
+}
+
+.toolbar h1 {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.toolbar ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.toolbar li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 2rem;
+  border-bottom: 2px solid $border-bottom;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.toolbar li:nth-child(5) {
+  background-color: $color-secondary;
+}
+
+.toolbar li:nth-child(5):before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(180deg, $color-tertiary 0%, $color-primary 100%);
+}
